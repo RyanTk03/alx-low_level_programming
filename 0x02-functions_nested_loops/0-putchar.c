@@ -4,7 +4,7 @@
  * main - Entry point of the program
  *
  * Description: Prints a message to the standard error.
- * Return: On success 1, on error -1.
+ * Return: On success 0, on error 1.
  */
 int main(void)
 {
@@ -13,11 +13,12 @@ int main(void)
 
 	while (str[i])
 	{
-		_putchar(str[i]);
+		if ((_putchar(str[i]))
+			return (1);
 		i++;
 	}
 
 	_putchar('\n');
 
-	return (1);
+	return (0);
 }
