@@ -11,8 +11,11 @@ int main(void)
 	int i = 0;
 	char *str = "_putchar";
 
-	while(_putchar(str[i]))
+	while (str[i])
+	{
+		_putchar(str[i]);
 		i++;
+	}
 
 	_putchar('\n');
 
