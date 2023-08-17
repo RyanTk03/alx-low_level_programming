@@ -9,7 +9,7 @@ void times_table(void)
 
 	for (i = 0; i <= 9; i++)
 	{
-		_putchar('0'); // Print the first digit of the row
+		_putchar('0');
 
 		for (j = 1; j <= 9; j++)
 		{
@@ -19,10 +19,10 @@ void times_table(void)
 			result = i * j;
 
 			if (result <= 9)
-				_putchar(' '); // Extra space for single-digit numbers
+				_putchar(' ');
 
-			_putchar((result / 10) + '0'); // Print tens digit
-			_putchar((result % 10) + '0'); // Print ones digit
+			_putchar((result / 10) + '0');
+			_putchar((result % 10) + '0');
 		}
 
 		_putchar('\n');

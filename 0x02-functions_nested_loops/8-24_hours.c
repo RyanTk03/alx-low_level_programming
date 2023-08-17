@@ -23,15 +23,15 @@ void jack_bauer(void)
 			}
 			_putchar(':');
 			if (minute < 10)
-                        {
-                                _putchar('0');
-                                _putchar('0' + minute);
-                        }
-                        else
-                        {
-                                _putchar('0' + minute / 10);
-                                _putchar('0' + minute % 10);
-                        }
+			{
+				_putchar('0');
+				_putchar('0' + minute);
+			}
+			else
+			{
+				_putchar('0' + minute / 10);
+				_putchar('0' + minute % 10);
+			}
 			_putchar('\n');
 
 		}
