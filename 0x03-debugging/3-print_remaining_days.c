@@ -16,7 +16,7 @@ void print_remaining_days(int month, int day, int year)
 	{
 		if (month > 2)
 		{
-			day++; // Add 1 day for February 29th in a leap year
+			day++;
 		}
 
 		printf("Day of the year: %d\n", day);
