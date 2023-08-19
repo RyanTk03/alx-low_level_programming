@@ -12,7 +12,7 @@ _putchar('\n');
 }
 else
 {
-int i;
+int i = 0;
 for (i = 0; i < n; i++)
 {
 _putchar('_');
