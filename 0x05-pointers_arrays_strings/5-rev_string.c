@@ -14,9 +14,7 @@ int length = 0;
 
 /* Calculate the length of the string */
 while (s[length] != '\0')
-{
 length++;
-}
 
 /* Swap characters from the beginning and end until the middle is reached */
 for (int i = 0; i < length / 2; i++)

@@ -16,9 +16,7 @@ int start_index = (length + 1) / 2;
 
 /* Calculate the length of the string */
 while (str[length] != '\0')
-{
 length++;
-}
 
 /* Print the second half of the string */
 while (str[start_index] != '\0')
