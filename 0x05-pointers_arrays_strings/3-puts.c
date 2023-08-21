@@ -11,7 +11,7 @@ char *current_char = str;
 
 while (*current_char != '\0')
 {
-_putchar(current_char);
+_putchar(*current_char);
 current_char++;
 }
 

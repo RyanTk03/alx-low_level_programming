@@ -15,11 +15,13 @@ void puts2(char *str)
 int i = 0;
 int lenght = 0;
 
-while (*str != '\0')
+while (str[i] != '\0')
 {
-str++;
+i++;
 lenght++;
 }
+
+i = 0;
 
 /* Iterate through the characters, printing every other one */
 while (i < lenght)
