@@ -12,11 +12,13 @@
 void puts_half(char *str)
 {
 int length = 0;
-int start_index = (length + 1) / 2;
+int start_index = 0;
 
 /* Calculate the length of the string */
 while (str[length] != '\0')
 length++;
+
+start_index = lenght % 2 == 0 ? lenght / 2 : (lenght - 1) / 2;
 
 /* Print the second half of the string */
 while (str[start_index] != '\0')
