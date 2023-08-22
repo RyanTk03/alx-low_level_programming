@@ -35,8 +35,6 @@ while (i < length && (s[i] < '0' || s[i] > '9'))
 {
 if (s[i] == '-')
 sign = -sign;
-else
-sign = 1;
 
 i++;
 }
@@ -47,7 +45,8 @@ while (s[i] >= '0' && s[i] <= '9')
 {
 
 if ((result > INT_MAX / 10 || (result == INT_MAX / 10 && s[i] - '0' >
-INT_MAX % 10)) || (result < INT_MIN / 10 || (result == INT_MIN / 10 && s[i] - '0' > INT_MIN % 10)))
+INT_MAX % 10)) || (result < INT_MIN / 10 || (result == INT_MIN / 10 && s[i] -
+'0' > INT_MIN % 10)))
 return (-1);
 
 result = result * 10 + (s[i] - '0');
