@@ -31,7 +31,7 @@ i++;
 
 i = 0;
 
-while (i < lenght && (s[i] < '0' || s[i] > '9'))
+while (i < length && (s[i] < '0' || s[i] > '9'))
 {
 if (s[i] == '-')
 sign = -1;
