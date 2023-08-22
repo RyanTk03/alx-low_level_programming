@@ -23,13 +23,13 @@ int main(void)
 
 	if (s != 2772)
 	{
-		x = (sum - 2772) / 2;
+		x = (s - 2772) / 2;
 		y = x;
 
-		if ((sum - 2772) % 2 != 0)
+		if ((s - 2772) % 2 != 0)
 			x++;
 
-		for (index = 0; psw[i]; i++)
+		for (i = 0; psw[i]; i++)
 		{
 			if (psw[i] >= (33 + x))
 			{

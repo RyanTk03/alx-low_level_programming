@@ -22,7 +22,7 @@ int sign = 1;
 int i = 0;
 
 
-while (s[i] < '0' || s[i] > '-')
+while (s[i] < '0' || s[i] > '9')
 {
 if (s[i] == '-')
 sign = -sign;
