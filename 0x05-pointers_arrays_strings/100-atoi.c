@@ -34,19 +34,21 @@ i = 0;
 while (i < length && (s[i] < '0' || s[i] > '9'))
 {
 if (s[i] == '-')
-sign = -1;
+sign = -sign;
 else
 sign = 1;
 
 i++;
 }
 
+result *= sign;
+
 while (s[i] >= '0' && s[i] <= '9')
 {
 
-if (result > INT_MAX / 10 || (result == INT_MAX / 10 && s[i] - '0' >
-INT_MAX % 10))
-return -1;
+if ((result > INT_MAX / 10 || (result == INT_MAX / 10 && s[i] - '0' >
+INT_MAX % 10)) || (result < INT_MIN / 10 || (result == INT_MIN / 10 && s[i] - '0' > INT_MIN % 10)))
+return (-1);
 
 result = result * 10 + (s[i] - '0');
 i++;
