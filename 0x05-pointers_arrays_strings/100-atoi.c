@@ -22,10 +22,12 @@ int sign = 1;
 int i = 0;
 
 
-while (s[i] == '+' || s[i] == '-')
+while (s[i] < '0' || s[i] > '-')
 {
 if (s[i] == '-')
 sign = -sign;
+else
+sign = 1;
 
 i++;
 }
