@@ -7,6 +7,9 @@
  * overwriting the terminating null byte (\0) at the end of dest, and 
  * then adds a terminating null byte
  *
+ * @dest: a pointer to the concatenation destionation
+ * @src: a pointer to the string to add in dest
+ *
  * Return: A pointer to the resulting string dest.
  */
 char *_strcat(char *dest, char *src)
@@ -15,9 +18,7 @@ char *_strcat(char *dest, char *src)
 	int j = 0;
 
 	while (dest[i] != '\0')
-	{
 		i++;
-	}
 
 	while (src[j] != '\0')
 	{
