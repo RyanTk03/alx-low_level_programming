@@ -9,8 +9,9 @@
  */
 void reverse_string(char *str)
 {
+int i = 0;
 int length = strlen(str);
-for (int i = 0, j = length - 1; i < j; i++, j--)
+for (i = 0, j = length - 1; i < j; i++, j--)
 {
 char temp = str[i];
 str[i] = str[j];
@@ -38,8 +39,8 @@ int digit1 = (*n1 != '\0') ? (*n1 - '0') : 0;
 int digit2 = (*n2 != '\0') ? (*n2 - '0') : 0;
 
 int sum = digit1 + digit2 + carry;
-carry = sum / 10;
 int digit = sum % 10;
+carry = sum / 10;
 
 if (index < size_r - 1)
 {

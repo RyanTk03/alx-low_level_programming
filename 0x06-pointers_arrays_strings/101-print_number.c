@@ -24,7 +24,7 @@ _putchar('-');
 n = -n;
 }
 
- if (n == 0)
+if (n == 0)
 _putchar('0');
 else
 print_digit(n);
