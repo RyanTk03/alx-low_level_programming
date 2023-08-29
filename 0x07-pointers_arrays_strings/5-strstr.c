@@ -15,11 +15,18 @@ char *_strstr(char *haystack, char *needle)
 	int i = 0, j = 0;
 	int find = 0;
 
-	while (*needle)
+	while (needle[i])
+	{
 		nlen++;
+		i++;
+	}
 
-	while (*haystack)
+	i = 0;
+	while (haystack[i])
+	{
 		hlen++;
+		i++;
+	}
 
 	for (i = 0; i < hlen - nlen; i++)
 	{
@@ -46,4 +53,3 @@ char *_strstr(char *haystack, char *needle)
 	else
 		return (NULL);
 }
-
