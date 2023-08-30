@@ -29,7 +29,7 @@ char *_strstr(char *haystack, char *needle)
 		i++;
 	}
 
-	for (i = 0; i < hlen - nlen; i++)
+	for (i = 0; i <= hlen - nlen; i++)
 	{
 		if (haystack[i] == needle[0])
 		{
