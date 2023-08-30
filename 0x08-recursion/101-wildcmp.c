@@ -12,10 +12,15 @@ int cmp(char *s1, char *s2, int w)
 {
 if (!s1)
 {
-if(*s2)
+if (!*s2)
+return (1);
+else
+{
+if (w)
 return (1);
 else
 return (0);
+}
 }
 
 if (!*s2 && w)
@@ -28,7 +33,7 @@ if (*s2 != '*')
 if (*s1 == *s2)
 {
 if (w)
-    w = 0;
+w = 0;
 return (cmp(++s1, ++s2, w));
 }
 if (w)
