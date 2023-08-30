@@ -13,7 +13,7 @@ int _prime_check(int d, int n)
 		return (0);
 
 	if (d > n / 2)
-		return (0);
+		return (1);
 
 	return (_prime_check(d + 1, n));
 }
@@ -24,7 +24,7 @@ int _prime_check(int d, int n)
  *	otherwise return 0.
  * @n: The number to check.
  *
- * Return: Returns 1 if the input integer is a prime number, otherwise return 0.
+ * Return: Returns 1 if the input integer is a prime number, otherwise return 0
  */
 int is_prime_number(int n)
 {
