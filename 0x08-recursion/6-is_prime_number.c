@@ -28,5 +28,8 @@ int _prime_check(int d, int n)
  */
 int is_prime_number(int n)
 {
+	if (n == 1 || n <= 0)
+		return (0);
+
 	return (_prime_check(2, n));
 }

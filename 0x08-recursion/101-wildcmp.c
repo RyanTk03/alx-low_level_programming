@@ -10,7 +10,7 @@
  */
 int cmp(char *s1, char *s2, int w)
 {
-if (!s1)
+if (!*s1)
 {
 if (!*s2)
 return (1);
@@ -34,10 +34,10 @@ if (*s1 == *s2)
 {
 if (w)
 w = 0;
-return (cmp(++s1, ++s2, w));
+return (cmp(s1 + 1, s2 + 1, w));
 }
 if (w)
-return (cmp(++s1, s2, 1));
+return (cmp(s1 + 1, s2, 1));
 return (0);
 }
 else
