@@ -1,6 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "main.h"
+
+/**
+ * main - a program that prints the minimum number of coins to make change for
+ *	an amount of money.
+ * @argc: The number of arguments.
+ * @argv: The value of arguments.
+ *
+ * Return: 1 on error, 0 else.
+ */
 int main(int argc, char *argv[])
 {
 if (argc != 2)
