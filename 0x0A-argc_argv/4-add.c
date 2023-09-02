@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+#include "main.h"
+
 /**
  * main - Adds positive numbers.
  * @argc: The number of command-line arguments.
@@ -11,15 +13,16 @@
  */
 int main(int argc, char *argv[])
 {
+
+int sum = 0;
+int i = 0;
+
 if (argc == 1)
 {
 /* No numbers provided, print 0 and return */
 printf("0\n");
 return (0);
 }
-
-int sum = 0;
-int i = 0;
 
 for (i = 1; i < argc; i++)
 {
