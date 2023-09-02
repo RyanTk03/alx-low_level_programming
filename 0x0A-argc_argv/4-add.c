@@ -44,7 +44,7 @@ return (1);
 sum += (int)num;
 }
 
-printf("%d\n", sum);
+printf("%u\n", sum);
 
 return (0);
 }
