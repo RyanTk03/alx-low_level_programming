@@ -40,7 +40,7 @@ count++;
 }
 }
 
-printf("%d\n", count);
+printf("%i\n", count);
 
 return (0);
 }

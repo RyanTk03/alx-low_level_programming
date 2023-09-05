@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	printf("%d\n", result);
+	printf("%i\n", result);
 
 	return (0);
 }
