@@ -9,38 +9,37 @@
  */
 int main(int argc, char *argv[])
 {
-    if (argc != 3)
-    {
-        printf("Error\n");
-        return 98;
-    }
+int i = 0;
+char *num1_str = argv[1];
+char *num2_str = argv[2];
+unsigned long num1 = strtoul(num1_str, NULL, 10);
+unsigned long num2 = strtoul(num2_str, NULL, 10);
+unsigned long result = num1 * num2;
+if (argc != 3)
+{
+printf("Error\n");
+return (98);
+}
 
-    char *num1_str = argv[1];
-    char *num2_str = argv[2];
+for (i = 0; num1_str[i] != '\0'; i++)
+{
+if (num1_str[i] < '0' || num1_str[i] > '9')
+{
+printf("Error\n");
+return (98);
+}
+}
 
-    for (int i = 0; num1_str[i] != '\0'; i++)
-    {
-        if (num1_str[i] < '0' || num1_str[i] > '9')
-        {
-            printf("Error\n");
-            return 98;
-        }
-    }
+for (i = 0; num2_str[i] != '\0'; i++)
+{
+if (num2_str[i] < '0' || num2_str[i] > '9')
+{
+printf("Error\n");
+return (98);
+}
+}
 
-    for (int i = 0; num2_str[i] != '\0'; i++)
-    {
-        if (num2_str[i] < '0' || num2_str[i] > '9')
-        {
-            printf("Error\n");
-            return 98;
-        }
-    }
+printf("%lu\n", result);
 
-    unsigned long num1 = strtoul(num1_str, NULL, 10);
-    unsigned long num2 = strtoul(num2_str, NULL, 10);
-    unsigned long result = num1 * num2;
-
-    printf("%lu\n", result);
-
-    return 0;
+return (0);
 }
