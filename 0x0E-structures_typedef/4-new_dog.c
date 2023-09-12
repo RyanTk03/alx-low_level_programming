@@ -10,7 +10,8 @@
 int _strlen(char *str)
 {
 	int len = 0;
-	while (str)
+
+	while (str[len])
 		len++;
 
 	return (len);
@@ -28,8 +29,11 @@ char *_strcopy(char *dest, char *src)
 {
 	int index = 0;
 
-	for (; src[index] ; index++)
+	while (src[index])
+	{
 		dest[index] = src[index];
+		index++;
+	}
 
 	dest[index] = '\0';
 	return (dest);
