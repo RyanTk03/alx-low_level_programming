@@ -40,10 +40,8 @@ void print_all(const char * const format, ...)
 				continue;
 			break;
 		}
-
 		if (*(format + i + 1))
 			printf(", ");
-
 		i++;
 	}
 
