@@ -15,8 +15,8 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	while (nb > 0)
 	{
-		printf("%d%s", va_arg(list, int), separator == NULL ? "" :
-				separator);
+		printf("%d%s", va_arg(list, int), separator == NULL || nb == 1
+				? "" : separator);
 		nb--;
 	}
 

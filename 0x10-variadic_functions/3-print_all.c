@@ -1,12 +1,5 @@
 #include "variadic_functions.h"
 
-#define GET_TYPE(t) type_ && t
-
-typedef int type_i;
-typedef char type_c;
-typedef float type_f;
-typedef char * type_s;
-
 /**
  * print_all - a function that prints anything.
  * @format: a list of types of arguments passed to the function.
@@ -14,33 +7,39 @@ typedef char * type_s;
 void print_all(const char * const format, ...)
 {
 	va_list list;
-	short i = 0;
-	char *fmt = format;
-	char fmt_list[4] = {'c', 'i', 'f', 's'};
-	char fmt_printf[2] = {'%', ''};
-
 	va_start(list, format);
 
-	while (*fmt)
+	while (*format)
 	{
-		while (i < 4)
+		switch (*format)
 		{
-			if (fmt_list[i] == *fmt)
+			case 'c':
+				printf("%c", va_arg(list, int));
+			break;
+			case 'i':
+				printf("%d", va_arg(list, int));
+			break;
+			case 'f':
+				printf("%f", va_arg(list, double));
+			break;
+			case 's':
 			{
-				GET_TYPE(*fmt) x = va_arg(list, GET_TYPE(*fmt));
-				if (*fmt == 's' && x == NULL)
-					x = "(nil)";
-
-				fmt_printf[1] = *fmt;
-				printf(fmt_printf, x);
-				break;
+				char *str = va_arg(list, char *);
+				if (str == NULL)
+					str = "(nil)";
+				printf("%s", str);
 			}
-			i++;
+			break;
+			default:
+			break;
 		}
-		fmt++;
+
+		if (*(format + 1))
+			printf(", ");
+
+		format++;
 	}
 
-	va_end(list);
-
 	printf("\n");
+	va_end(list);
 }

@@ -8,16 +8,17 @@
  */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-        va_list list;
-        unsigned int nb = n;
+	va_list list;
+	unsigned int nb = n;
 
-        va_start(list, n);
+	va_start(list, n);
 
-        while (nb > 0)
-        {
+	while (nb > 0)
+	{
 		char *s = va_arg(list, char *);
-                printf("%s%s", s == NULL ? "(nil)" : s, separator == NULL ? ""
-				: separator);
+
+		printf("%s%s", s == NULL ? "(nil)" : s, separator == NULL ||
+				nb == 1 ? "" : separator);
 		nb--;
 	}
 
