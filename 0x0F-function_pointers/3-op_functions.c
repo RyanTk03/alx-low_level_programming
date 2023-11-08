@@ -6,7 +6,7 @@
  * @b: The second integer
  * Return: Sum of a and b
  */
-int add(int a, int b)
+int op_add(int a, int b)
 {
 return (a + b);
 }
@@ -17,7 +17,7 @@ return (a + b);
  * @b: The second integer
  * Return: Difference of a and b
  */
-int sub(int a, int b)
+int op_sub(int a, int b)
 {
 return (a - b);
 }
@@ -28,7 +28,7 @@ return (a - b);
  * @b: The second integer
  * Return: Product of a and b
  */
-int mul(int a, int b)
+int op_mul(int a, int b)
 {
 return (a * b);
 }
@@ -39,7 +39,7 @@ return (a * b);
  * @b: The second integer
  * Return: Result of a divided by b
  */
-int div(int a, int b)
+int op_div(int a, int b)
 {
 if (b == 0)
 {
@@ -55,7 +55,7 @@ return (a / b);
  * @b: The second integer
  * Return: Remainder of a divided by b
  */
-int mod(int a, int b)
+int op_mod(int a, int b)
 {
 if (b == 0)
 {
