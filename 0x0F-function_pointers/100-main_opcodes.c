@@ -12,7 +12,7 @@ void print_opcodes(unsigned char *main_address, int num_bytes)
 
 	for (i = 0; i < num_bytes; i++)
 	{
-        	printf("%02x", main_address[i]);
+		printf("%02x", main_address[i]);
 		if (i < num_bytes - 1)
 		{
 			printf(" ");
