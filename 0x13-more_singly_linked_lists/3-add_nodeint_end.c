@@ -15,14 +15,14 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 	if (!li)
 		return (NULL);
 
-	while (*head && head->next)
-		head = head->next;
+	while (*head && (*head)->next)
+		*head = (*head)->next;
 
 	li->n = n;
 	li->next = NULL;
 
 	if (*head)
-		*head->next = li;
+		(*head)->next = li;
 	else
 		*head = li;
 
