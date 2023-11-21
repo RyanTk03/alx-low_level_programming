@@ -41,7 +41,7 @@ size_t free_listint_safe(listint_t **head)
 
 	if (head == NULL || *head == NULL)
 		return (num);
-	
+
 	while (*head != NULL)
 	{
 		for (i = 0; i < num; i++)
@@ -60,6 +60,6 @@ size_t free_listint_safe(listint_t **head)
 		*head = next;
 	}
 	free(list);
-	
+
 	return (num);
 }
