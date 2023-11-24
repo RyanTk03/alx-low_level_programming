@@ -21,7 +21,7 @@ unsigned int mypow(unsigned int base, int exponent)
 				result *= base;
 		/* for negatif exponent : not used, so not implemented */
 		else
-			result = 0
+			result = 0;
 
 		return (result);
 	}
@@ -36,7 +36,7 @@ unsigned int mypow(unsigned int base, int exponent)
  *
  * Return: the size of a string.
  */
-size_t mystrlen(char *b)
+size_t mystrlen(const char *b)
 {
 	size_t i = 0;
 
