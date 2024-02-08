@@ -55,28 +55,26 @@ size_t mystrlen(const char *b)
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int result = 0;
-	size_t len = 0;
+	int len, base_two;
 
-	if (b != NULL)
+	if (b == NULL)
+		return (0);
+
+
+	len = mystrlen(b) - 1;
+
+	while (b[len])
 	{
-		len = mystrlen(b) - 1;
-
-		/* Go to the first charactere '1' */
-		while (b[len] == '0')
-			len--;
-
-		while (b[len])
+		if (b[len] != '0' && b[len] != '1')
 		{
-			if (b[len] != '0' && b[len] != '1')
-				return (0);
-
-			if (b[len] == '1')
-				result += mypow(2, len);
-			len--;
+			return (0);
 		}
 
-		return (result);
+		if (b[len] == '1')
+		{
+			result += mypow(2, len);
+		}
 	}
 
-	return (0);
+	return (result);
 }
