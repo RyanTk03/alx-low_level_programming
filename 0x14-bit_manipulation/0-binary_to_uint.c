@@ -55,7 +55,7 @@ size_t mystrlen(const char *b)
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int result = 0;
-	int len, base_two;
+	int len;
 
 	if (b == NULL)
 		return (0);
