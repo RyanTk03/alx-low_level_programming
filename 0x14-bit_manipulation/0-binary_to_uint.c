@@ -74,6 +74,7 @@ unsigned int binary_to_uint(const char *b)
 		{
 			result += mypow(2, len);
 		}
+		len--;
 	}
 
 	return (result);
