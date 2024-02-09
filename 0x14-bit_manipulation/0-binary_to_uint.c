@@ -63,7 +63,7 @@ unsigned int binary_to_uint(const char *b)
 
 	len = mystrlen(b) - 1;
 
-	while (b[len])
+	while (len >= 0)
 	{
 		if (b[len] != '0' && b[len] != '1')
 		{
