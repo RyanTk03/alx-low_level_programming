@@ -9,7 +9,7 @@
  */
 int mystrlen(const char *b)
 {
-	len i = 0;
+	int i = 0;
 
 	while (b[i])
 		i++;
